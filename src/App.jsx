@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <main className="md:flex container mx-auto pl-4 pt-4 bg-[#ffecd1]">
+      <main className="md:flex container mx-auto pl-4 pt-4">
         <Blogs></Blogs>
         <Bookmarks></Bookmarks>
       </main>
