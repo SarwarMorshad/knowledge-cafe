@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
   //   console.log(blog);
-  const { title, cover, author, author_img, reading_time, posted_date, hashtags } = blog;
+  const { id, title, cover, author, author_img, reading_time, posted_date, hashtags } = blog;
   return (
     <div className="mb-20 border-b-4">
       <img className="w-auto mb-8 rounded-2xl" src={cover} alt={`Cover picture of ${title}`} />
@@ -30,7 +30,10 @@ const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
           </span>
         ))}
       </p>
-      <button className="text-[#6047EC] font-bold underline" onClick={() => handleMarkAsRead(reading_time)}>
+      <button
+        className="text-[#6047EC] font-bold underline"
+        onClick={() => handleMarkAsRead(reading_time, id)}
+      >
         Mark as Read
       </button>
     </div>
